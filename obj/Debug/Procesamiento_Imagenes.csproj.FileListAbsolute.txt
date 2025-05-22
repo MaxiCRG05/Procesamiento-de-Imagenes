@@ -1,0 +1,17 @@
+C:\Users\Equipo 15\source\repos\Procesamiento_Imagenes\bin\Debug\Procesamiento_Imagenes.exe.config
+C:\Users\Equipo 15\source\repos\Procesamiento_Imagenes\bin\Debug\Procesamiento_Imagenes.exe
+C:\Users\Equipo 15\source\repos\Procesamiento_Imagenes\bin\Debug\Procesamiento_Imagenes.pdb
+C:\Users\Equipo 15\source\repos\Procesamiento_Imagenes\obj\Debug\Procesamiento_Imagenes.csproj.AssemblyReference.cache
+C:\Users\Equipo 15\source\repos\Procesamiento_Imagenes\obj\Debug\Procesamiento_Imagenes.Form1.resources
+C:\Users\Equipo 15\source\repos\Procesamiento_Imagenes\obj\Debug\Procesamiento_Imagenes.Properties.Resources.resources
+C:\Users\Equipo 15\source\repos\Procesamiento_Imagenes\obj\Debug\Procesamiento_Imagenes.csproj.GenerateResource.cache
+C:\Users\Equipo 15\source\repos\Procesamiento_Imagenes\obj\Debug\Procesamiento_Imagenes.csproj.CoreCompileInputs.cache
+C:\Users\Equipo 15\source\repos\Procesamiento_Imagenes\obj\Debug\Procesamiento_Imagenes.exe
+C:\Users\Equipo 15\source\repos\Procesamiento_Imagenes\obj\Debug\Procesamiento_Imagenes.pdb
+C:\Users\Equipo 15\source\repos\Procesamiento_Imagenes\bin\Debug\AForge.dll
+C:\Users\Equipo 15\source\repos\Procesamiento_Imagenes\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\Equipo 15\source\repos\Procesamiento_Imagenes\bin\Debug\AForge.Video.dll
+C:\Users\Equipo 15\source\repos\Procesamiento_Imagenes\bin\Debug\AForge.xml
+C:\Users\Equipo 15\source\repos\Procesamiento_Imagenes\bin\Debug\AForge.Video.xml
+C:\Users\Equipo 15\source\repos\Procesamiento_Imagenes\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\Equipo 15\source\repos\Procesamiento_Imagenes\obj\Debug\Procesam.5AD420A0.Up2Date
