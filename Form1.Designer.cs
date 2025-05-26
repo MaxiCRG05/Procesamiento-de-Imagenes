@@ -51,6 +51,7 @@
 			this.label9 = new System.Windows.Forms.Label();
 			this.imgBordes = new System.Windows.Forms.PictureBox();
 			this.label10 = new System.Windows.Forms.Label();
+			this.btnPause = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.imgOriginal)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.imgGrises)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.imgBandW)).BeginInit();
@@ -272,11 +273,22 @@
 			this.label10.TabIndex = 19;
 			this.label10.Text = "IMÁGEN BORDES";
 			// 
+			// btnPause
+			// 
+			this.btnPause.Location = new System.Drawing.Point(25, 144);
+			this.btnPause.Name = "btnPause";
+			this.btnPause.Size = new System.Drawing.Size(75, 36);
+			this.btnPause.TabIndex = 23;
+			this.btnPause.Text = "PAUSAR CAMARA";
+			this.btnPause.UseVisualStyleBackColor = true;
+			this.btnPause.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnPause_MouseClick);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(955, 789);
+			this.Controls.Add(this.btnPause);
 			this.Controls.Add(this.Res4);
 			this.Controls.Add(this.label9);
 			this.Controls.Add(this.imgBordes);
@@ -340,6 +352,7 @@
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.PictureBox imgBordes;
 		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.Button btnPause;
 	}
 }
 

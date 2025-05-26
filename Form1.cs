@@ -31,6 +31,7 @@ namespace Procesamiento_Imagenes
 			{
 				videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
 				hayCamara = videoDevices.Count > 0;
+				btnPause.Enabled = hayCamara;
 			}
 			catch (Exception ex)
 			{
@@ -222,7 +223,7 @@ namespace Procesamiento_Imagenes
 			BitmapData bmpdata = btm.LockBits(new Rectangle(0, 0, btm.Width, btm.Height),
 												ImageLockMode.ReadWrite, btm.PixelFormat);
 			int numbytes = bmpdata.Stride * btm.Height;
-			int umbral = 128;
+			int umbral = 45;
 			byte[] bytedata = new byte[numbytes];
 			IntPtr arregloImagen = bmpdata.Scan0;
 			Marshal.Copy(arregloImagen, bytedata, 0, numbytes);
@@ -283,6 +284,7 @@ namespace Procesamiento_Imagenes
 			{
 				LimpiarImagenes();
 				LimpiarLabels();
+				imgOriginal.Image = null;
 			}
 
 		}
@@ -346,10 +348,19 @@ namespace Procesamiento_Imagenes
 			LimpiarImagenes();
 			LimpiarLabels();
 			ProcesarIMGCPU();
-			imgBordes.Image = DetectarBordes((Bitmap)imgGrises.Image);
+			if(imgGrises.Image != null)
+				imgBordes.Image = DetectarBordes((Bitmap)imgGrises.Image);
 			sw.Stop();
-			PonerTiempo(sw);
-			ActualizarResoluciones();
+			if (imgOriginal.Image != null)
+			{
+				PonerTiempo(sw);
+				ActualizarResoluciones();
+			}
+		}
+
+		private void btnPause_MouseClick(object sender, MouseEventArgs e)
+		{
+			DetenerCamara();
 		}
 	}
 }
