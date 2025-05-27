@@ -63,10 +63,10 @@ namespace Procesamiento_Imagenes
 
 		private void ActualizarResoluciones()
 		{
-			Res1.Text = $"{imgOriginal.Width}x{imgOriginal.Height} px";
-			Res2.Text = $"{imgGrises.Width}x{imgGrises.Height} px";
-			Res3.Text = $"{imgBandW.Width}x{imgBandW.Height} px";
-			Res4.Text = $"{imgBordes.Width}x{imgBordes.Height} px";
+			Res1.Text = $"{imgOriginal.Image.Width}x{imgOriginal.Image.Height} px";
+			Res2.Text = $"{imgGrises.Image.Width}x{imgGrises.Image.Height} px";
+			Res3.Text = $"{imgBandW.Image.Width}x{imgBandW.Image.Height} px";
+			Res4.Text = $"{imgBordes.Image.Width}x{imgBordes.Image.Height} px";
 		}
 
 		private void video_NewFrame(object sender, NewFrameEventArgs eventArgs)
@@ -229,15 +229,15 @@ namespace Procesamiento_Imagenes
 			Marshal.Copy(arregloImagen, bytedata, 0, numbytes);
 			byte[] copiaDatos = new byte[numbytes];
 			Array.Copy(bytedata, copiaDatos, numbytes);
-			int[,] sobelX = { { -1, 0, 1 }, { -2, 0, 2 }, { -1, 0, 1 } };
-			int[,] sobelY = { { -1, -2, -1 }, { 0, 0, 0 }, { 1, 2, 1 } };
+			int[,] sobelX = { { -1, 0, 1 }, { -1, 0, 1 }, { -1, 0, 1 } };
+			int[,] sobelY = { { -1, -1, -1 }, { 0, 0, 0 }, { 1, 1, 1 } };
 			int width = btm.Width;
 			int height = btm.Height;
 			int stride = bmpdata.Stride;
 			Bitmap bordes = new Bitmap(width, height);
 			using (Graphics g = Graphics.FromImage(bordes))
 			{
-				g.Clear(Color.Transparent);
+				g.Clear(Color.Black);
 				for (int y = 1; y < height - 1; y++)
 				{
 					for (int x = 1; x < width - 1; x++)
@@ -258,7 +258,7 @@ namespace Procesamiento_Imagenes
 						int magnitude = (int)Math.Sqrt(gx * gx + gy * gy);
 						if (magnitude > umbral)
 						{
-							using (Brush brush = new SolidBrush(Color.Red))
+							using (Brush brush = new SolidBrush(Color.White))
 							{
 								g.FillRectangle(brush, x, y, 1, 1);
 							}
@@ -295,7 +295,7 @@ namespace Procesamiento_Imagenes
 			{
 				try
 				{
-					finder.Filter = "Imagenes|*.jpg;*.jpeg;*.png;*.bmp";
+					finder.Filter = "Imagenes|*.jpg;*.jpeg;*.png;*.bmp;*.jfif";
 					finder.Title = "Selecciona una imagen";
 					finder.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 					finder.ShowDialog();

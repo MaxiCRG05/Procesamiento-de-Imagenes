@@ -154,6 +154,7 @@
 			this.imgGrises.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.imgGrises.TabIndex = 9;
 			this.imgGrises.TabStop = false;
+			this.imgGrises.Visible = false;
 			// 
 			// imgBandW
 			// 
@@ -163,6 +164,7 @@
 			this.imgBandW.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.imgBandW.TabIndex = 10;
 			this.imgBandW.TabStop = false;
+			this.imgBandW.Visible = false;
 			// 
 			// label5
 			// 
